@@ -1,0 +1,34 @@
+# This file is part of the dinStaticPlugin package.
+# (c) DineCat, 2009-2010 http://dinecat.com/
+#
+# For the full copyright and license information, please view the LICENSE file,
+# that was distributed with this package, or see http://www.dinecat.com/din/license.html
+
+# dinStaticPlugin routing configuration
+#
+# @package     dinStaticPlugin.config
+# @signed      5
+# @signer      vatson
+# @author      vatson [http://vatson.com.ua/]
+# @since       december 8, 2009
+# @version     SVN: $Id: routing.yml 29 2010-02-17 10:59:20Z relo_san $
+
+din_std_static_page:
+    class:                      'sfDoctrineRouteCollection'
+    options:
+        model:                  'DinStaticPage'
+        module:                 'dinStdStaticPage'
+        prefix_path:            '/std/static/:category_id/pages'
+        column:                 'id'
+        with_wildcard_routes:   true
+
+din_std_static_category:
+    class:                      'sfDoctrineRouteCollection'
+    options:
+        model:                  'DinStaticCategory'
+        module:                 'dinStdStaticCategory'
+        prefix_path:            '/std/static'
+        column:                 'id'
+        with_wildcard_routes:   true
+
+#EOF

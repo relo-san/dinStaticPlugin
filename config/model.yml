@@ -1,0 +1,48 @@
+
+# This file is part of the dinStaticPlugin package.
+# (c) DineCat, 2010 http://dinecat.com/
+#
+# For the full copyright and license information, please view the LICENSE file,
+# that was distributed with this package, or see http://www.dinecat.com/din/license.html
+
+# dinStaticPlugin model configuration
+#
+# @package     dinStaticPlugin
+# @subpackage  config
+# @author      Nicolay N. Zyk <relo.san@gmail.com>
+forms:
+
+    DinStaticCategory:
+        fields:
+            root_id:
+                disable:            true
+            lft:
+                disable:            true
+            rgt:
+                disable:            true
+            level:
+                disable:            true
+
+    DinStaticPage:
+        fields:
+            category_id:
+                widget:
+                    options:
+                        method:     'getIndentedName'
+                        order_by:   ['root_id, lft']
+                validator:
+                    options:
+                        required:   false
+
+filters:
+
+    DinStaticCategory:
+        disable:                true
+
+    DinStaticCategoryTranslation:
+        disable:                true
+
+    DinStaticPageTranslation:
+        disable:                true
+
+#EOF

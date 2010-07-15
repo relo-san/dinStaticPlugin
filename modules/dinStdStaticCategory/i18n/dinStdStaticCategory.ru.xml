@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file source-language="EN" target-language="ru" datatype="plaintext">
+        <header/>
+        <body>
+
+        <!-- Action layouts, views -->
+            <trans-unit>
+                <source>titles.list</source>
+                <target><![CDATA[Папки статических страниц]]></target>
+            </trans-unit>
+            <trans-unit>
+                <source>titles.edit.%%uri%%%@root@%</source>
+                <target><![CDATA[Редактирование папки &laquo;%%uri%%&raquo; в %@root@%]]></target>
+            </trans-unit>
+            <trans-unit>
+                <source>titles.new.%@root@%</source>
+                <target>Добавление папки в %@root@%</target>
+            </trans-unit>
+            <trans-unit>
+                <source>listLabels.pages</source>
+                <target>Страницы</target>
+            </trans-unit>
+            <trans-unit>
+                <source>listLabels.addChild</source>
+                <target>Добавить подпапку</target>
+            </trans-unit>
+            <trans-unit>
+                <source>listLabels.title</source>
+                <target>Название</target>
+            </trans-unit>
+            <trans-unit>
+                <source>listLabels.uri</source>
+                <target>Идентификатор</target>
+            </trans-unit>
+            <trans-unit>
+                <source>listLabels.isPublic</source>
+                <target>Опубликована?</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.order</source>
+                <target>Сохранить сортировку</target>
+            </trans-unit>
+
+        <!-- Form fieldsets -->
+            <trans-unit>
+                <source>fieldsets.base</source>
+                <target>Основные</target>
+            </trans-unit>
+            <trans-unit>
+                <source>fieldsets.def</source>
+                <target>Содержание</target>
+            </trans-unit>
+            <trans-unit>
+                <source>fieldsets.ru</source>
+                <target>Русский</target>
+            </trans-unit>
+            <trans-unit>
+                <source>fieldsets.en</source>
+                <target>Английский</target>
+            </trans-unit>
+            <trans-unit>
+                <source>fieldsets.uk</source>
+                <target>Украинский</target>
+            </trans-unit>
+
+
+        <!-- Form fields -->
+            <trans-unit>
+                <source>formLabels.uri</source>
+                <target>Идентификатор</target>
+            </trans-unit>
+            <trans-unit>
+                <source>formLabels.parent</source>
+                <target>Вышестоящая папка</target>
+            </trans-unit>
+            <trans-unit>
+                <source>formLabels.anonce</source>
+                <target>Анонс</target>
+            </trans-unit>
+            <trans-unit>
+                <source>formLabels.title</source>
+                <target>Название</target>
+            </trans-unit>
+            <trans-unit>
+                <source>formLabels.description</source>
+                <target>Описание</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.isEmpty</source>
+                <target>Нет значения?</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.yesOrNo</source>
+                <target>Любое</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.yes</source>
+                <target>Да</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.no</source>
+                <target>Нет</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.fromDate</source>
+                <target>С</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.toDate</source>
+                <target>по</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

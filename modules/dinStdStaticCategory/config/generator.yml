@@ -1,0 +1,29 @@
+# This file is part of the dinStaticPlugin package.
+# (c) DineCat, 2009-2010 http://dinecat.com/
+#
+# For the full copyright and license information, please view the LICENSE file,
+# that was distributed with this package, or see http://www.dinecat.com/din/license.html
+
+# dinStdStaticCategory admin generator configuration
+#
+# @package     dinStaticPlugin.modules.dinStdStaticCategory.config
+# @signed      4
+# @signer      relo_san
+# @author      relo_san [http://relo-san.com/]
+# @since       february 14, 2010
+# @version     SVN: $Id$
+
+<?php
+$class = 'DinStdStaticCategoryModuleDefinition';
+$file = sfConfig::get( 'sf_lib_dir' ) . '/config/dinStaticPlugin/' . $class .'.class.php';
+$pluginFile = sfConfig::get( 'sf_plugins_dir' ) . '/dinStaticPlugin/modules/dinStdStaticCategory/config/Plugin' . $class . '.class.php';
+require_once $pluginFile;
+if ( is_readable( $file ) ) require_once $file;
+if ( !class_exists( $class ) ) $class = 'Plugin' . $class;
+$mgr = new $class;
+$mgr->configure();
+?>
+
+<?php echo $mgr->getAsYml() ?>
+
+#EOF

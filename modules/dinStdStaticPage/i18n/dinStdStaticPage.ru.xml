@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file source-language="EN" target-language="ru" datatype="plaintext">
+        <header/>
+        <body>
+
+        <!-- Action layouts, views -->
+            <trans-unit>
+                <source>titles.list.%@fullPath@%</source>
+                <target><![CDATA[Страницы в папке &laquo;%@fullPath@%&raquo;]]></target>
+            </trans-unit>
+            <trans-unit>
+                <source>titles.edit.%%title%%</source>
+                <target><![CDATA[Редактирование страницы &laquo;%%title%%&raquo;]]></target>
+            </trans-unit>
+            <trans-unit>
+                <source>titles.new</source>
+                <target>Добавление страницы</target>
+            </trans-unit>
+            <trans-unit>
+                <source>listLabels.category</source>
+                <target>Папки</target>
+            </trans-unit>
+            <trans-unit>
+                <source>listLabels.title</source>
+                <target>Заголовок</target>
+            </trans-unit>
+            <trans-unit>
+                <source>listLabels.uri</source>
+                <target>Идентификатор</target>
+            </trans-unit>
+            <trans-unit>
+                <source>listLabels.isPublic</source>
+                <target>Опубликована?</target>
+            </trans-unit>
+
+        <!-- Form fieldsets -->
+            <trans-unit>
+                <source>fieldsets.base</source>
+                <target>Основные</target>
+            </trans-unit>
+            <trans-unit>
+                <source>fieldsets.def</source>
+                <target>Содержание</target>
+            </trans-unit>
+            <trans-unit>
+                <source>fieldsets.ru</source>
+                <target>Русский</target>
+            </trans-unit>
+            <trans-unit>
+                <source>fieldsets.en</source>
+                <target>Английский</target>
+            </trans-unit>
+            <trans-unit>
+                <source>fieldsets.uk</source>
+                <target>Украинский</target>
+            </trans-unit>
+
+
+        <!-- Form fields -->
+            <trans-unit>
+                <source>formLabels.uri</source>
+                <target>Идентификатор</target>
+            </trans-unit>
+            <trans-unit>
+                <source>formLabels.category</source>
+                <target>Категория</target>
+            </trans-unit>
+            <trans-unit>
+                <source>formLabels.description</source>
+                <target>Описание</target>
+            </trans-unit>
+            <trans-unit>
+                <source>formLabels.isPublic</source>
+                <target>Опубликована?</target>
+            </trans-unit>
+            <trans-unit>
+                <source>formLabels.anonce</source>
+                <target>Анонс</target>
+            </trans-unit>
+            <trans-unit>
+                <source>formLabels.title</source>
+                <target>Название</target>
+            </trans-unit>
+            <trans-unit>
+                <source>formLabels.body</source>
+                <target>Текст</target>
+            </trans-unit>
+            <trans-unit>
+                <source>formLabels.sequence</source>
+                <target>Позиция</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.isEmpty</source>
+                <target>Нет значения?</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.yesOrNo</source>
+                <target>Любое</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.yes</source>
+                <target>Да</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.no</source>
+                <target>Нет</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.fromDate</source>
+                <target>С</target>
+            </trans-unit>
+            <trans-unit>
+                <source>labels.toDate</source>
+                <target>по</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

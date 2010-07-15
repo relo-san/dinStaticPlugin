@@ -1,0 +1,69 @@
+
+# This file is part of the dinStaticPlugin package.
+# (c) DineCat, 2010 http://dinecat.com/
+#
+# For the full copyright and license information, please view the LICENSE file,
+# that was distributed with this package, or see http://www.dinecat.com/din/license.html
+
+# Plugin schema file for Doctrine
+#
+# @package     dinStaticPlugin
+# @subpackage  config.doctrine
+# @author      Nicolay N. Zyk <relo.san@gmail.com>
+
+#DinStaticCategory
+DinStaticCategory:
+
+    actAs:
+        I18n:
+            fields:         ['title', 'uri', 'is_public', 'description']
+            unique:         ['uri']
+        NestedSet:          { hasManyRoots: true, rootColumnName: 'root_id' }
+
+    columns:
+        id:                 { type: 'integer(4)', primary: true, autoincrement: true }
+        root_id:            { type: 'integer(4)' }
+        is_public:          { type: 'boolean', notnull: true, default: false }
+        title:              { type: 'string(150)', fixed: true }
+        uri:                { type: 'string(50)', fixed: true }
+        description:        { type: 'clob(65532)' }
+
+    indexes:
+        public:             { fields: ['is_public'] }
+        uri:                { fields: ['uri'], type: 'unique' }
+
+
+#DinStaticPage
+DinStaticPage:
+
+    actAs:
+        I18n:
+            fields:         ['title', 'uri', 'is_public', 'anonce', 'body', 'description']
+            unique:         ['uri']
+
+    columns:
+        id:                 { type: 'integer(4)', primary: true, autoincrement: true }
+        category_id:        { type: 'integer(4)', notnull: true }
+        is_public:          { type: 'boolean', notnull: true, default: false }
+        title:              { type: 'string(250)', fixed: true }
+        uri:                { type: 'string(50)', fixed: true }
+        anonce:             { type: 'clob(65532)' }
+        description:        { type: 'clob(65532)' }
+        body:               { type: 'clob' }
+        sequence:           { type: 'integer(4)' }
+
+    indexes:
+        public:             { fields: ['is_public'] }
+        uri:                { fields: ['uri'], type: 'unique' }
+
+    relations:
+        DinStaticCategory:
+            local:          'category_id'
+            foreign:        'id'
+            type:           'one'
+            foreignType:    'many'
+            alias:          'Category'
+            foreignAlias:   'Pages'
+            onDelete:       'CASCADE'
+
+#EOF
