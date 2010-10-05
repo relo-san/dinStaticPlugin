@@ -32,19 +32,6 @@ class PluginDinStaticCategoryTable extends DinDoctrineTable
 
 
     /**
-     * Returns a formatted array of news categories with I18n for sfWidgetFormChoice
-     *
-     * @return  array
-     */
-    public function getCategoriesForChoice( $onlyPublic = false , $culture = null )
-    {
-
-        return parent::getChoices( 'is_public', $onlyPublic );
-
-    } // PluginDinNewsCategoryTable::getCategoriesForChoice()
-
-
-    /**
      * Get categories query
      * 
      * @param   array   $params Query params [optional]
@@ -54,8 +41,8 @@ class PluginDinStaticCategoryTable extends DinDoctrineTable
     {
 
         $q = $this->createQuery();
-        $q->addWhere( $this->getColumn( $q, 'is_public' ) . ' = ?', true );
-        $this->joinI18n( $q );
+        $this->addQuery( $q )->joinI18n()->addSelect( array( 'id', 'uri', 'level', 'title' ) )
+            ->addWhere( 'is_public', true )->addOrderBy( array( 'root_id', 'lft' ) )->free();
         return $q;
 
     } // PluginDinStaticCategoryTable::getCategoriesQuery()

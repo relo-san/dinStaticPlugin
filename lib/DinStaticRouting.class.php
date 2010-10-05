@@ -34,8 +34,8 @@ class DinStaticRouting
 
         $routing = $event->getSubject();
 
-        $cats = sfContext::getInstance()->get( 'cache_routing' )->getContent(
-            'static_cats', 'DinStaticCategory', array()
+        $cats = sfContext::getInstance()->get( 'cache_manager' )->getContent(
+            'static_categories', 'DinStaticCategory', array()
         );
 
         $uriParams = sfConfig::get( 'app_static_uri' );

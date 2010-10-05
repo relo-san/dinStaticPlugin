@@ -34,7 +34,7 @@ class DinStaticHelper
     static public function block( $name, $culture = null )
     {
 
-        $page = sfContext::getInstance()->get( 'cache_routing' )->getContent(
+        $page = sfContext::getInstance()->get( 'cache_manager' )->getContent(
             'static_page', 'DinStaticPage',
             array( 'category_id' => 2, 'uri' => $name )
         );

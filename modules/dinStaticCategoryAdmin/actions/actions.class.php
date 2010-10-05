@@ -2,32 +2,27 @@
 
 /*
  * This file is part of the dinStaticPlugin package.
- * (c) DineCat, 2009-2010 http://dinecat.com/
+ * (c) DineCat, 2010 http://dinecat.com/
  * 
  * For the full copyright and license information, please view the LICENSE file,
  * that was distributed with this package, or see http://www.dinecat.com/din/license.html
  */
 
 /**
- * dinStdStaticCategory module actions
+ * dinStaticCategoryAdmin module actions
  * 
- * @package     dinStaticPlugin.modules.dinStdStaticCategory.actions
- * @signed      4
- * @signer      relo_san
- * @author      relo_san [http://relo-san.com/]
- * @since       february 14, 2010
- * @version     SVN: $Id$
+ * @package     dinStaticPlugin
+ * @subpackage  modules.dinStaticCategoryAdmin.actions
+ * @author      Nicolay N. Zyk <relo.san@gmail.com>
  */
-class dinStdStaticCategoryActions extends autoDinStdStaticCategoryActions
+class dinStaticCategoryAdminActions extends autoDinStaticCategoryAdminActions
 {
 
     /**
-     * Execute delete
+     * Delete action
      * 
      * @param   sfWebRequest    $request
-     * @return  void
-     * @author  relo_san
-     * @since   february 16, 2010
+     * @return  string  View name constant or partial
      */
     public function executeDelete( sfWebRequest $request )
     {
@@ -50,18 +45,16 @@ class dinStdStaticCategoryActions extends autoDinStdStaticCategoryActions
 
         $this->getUser()->setFlash( 'notice', 'admin.messages.deleteSuccess' );
 
-        $this->forward( 'dinStdStaticCategory', 'index' );
+        $this->forward( 'dinStaticCategoryAdmin', 'index' );
 
-    } // dinStdStaticCategoryActions::executeDelete()
+    } // dinStaticCategoryAdminActions::executeDelete()
 
 
     /**
-     * Execute list new
+     * List new action
      * 
      * @param   sfWebRequest    $request
-     * @return  void
-     * @author  relo_san
-     * @since   february 16, 2010
+     * @return  string  View name constant or partial
      */
     public function executeListNew( sfWebRequest $request )
     {
@@ -70,38 +63,35 @@ class dinStdStaticCategoryActions extends autoDinStdStaticCategoryActions
         $this->form->setDefault( 'parent_id', $request->getParameter( 'id' ) );
         $this->setTemplate( 'new' );
 
-    } // dinStdStaticCategoryActions::executeListNew()
+    } // dinStaticCategoryAdminActions::executeListNew()
 
 
     /**
      * Add sort query
      * 
+     * @param   Doctrine_Query  $q
      * @return  void
-     * @author  relo_san
-     * @since   february 16, 2010
      */
     protected function addSortQuery( $q )
     {
 
         $q->addOrderBy( 'root_id, lft' );
 
-    } // dinStdStaticCategoryActions::addSortQuery()
+    } // dinStaticCategoryAdminActions::addSortQuery()
 
 
     /**
      * Get filters
      * 
      * @return  boolean false
-     * @author  relo_san
-     * @since   february 16, 2010
      */
     public function getFilters()
     {
 
         return false;
 
-    } // dinStdStaticCategoryActions::getFilters()
+    } // dinStaticCategoryAdminActions::getFilters()
 
-} // dinStdStaticCategoryActions
+} // dinStaticCategoryAdminActions
 
 //EOF

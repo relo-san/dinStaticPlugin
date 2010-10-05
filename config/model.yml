@@ -28,11 +28,11 @@ forms:
             category_id:
                 widget:
                     options:
-                        method:     'getIndentedName'
-                        order_by:   ['root_id, lft']
+                        method:     "'getIndentedName'"
+                        order_by:   "array( 'root_id, lft', '' )"
                 validator:
                     options:
-                        required:   false
+                        required:   'false'
 
 filters:
 
